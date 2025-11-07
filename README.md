@@ -28,7 +28,7 @@ python -m unittest bleurt.score_not_eager_test
 python -m unittest bleurt.finetune_test
 python -m unittest bleurt.score_files_test
 ```
-# COMP8240 — BLEURT Replication & Evaluation (Codespaces/JupyterLab)
+## COMP8240 — BLEURT Replication & Evaluation (Codespaces/JupyterLab)
 
 This repository contains my **replication** of BLEURT (Sellam et al., ACL 2020) and **extensions** to additional datasets.  
 It is designed to run **end-to-end in GitHub Codespaces using JupyterLab** (CPU-only compatible).
@@ -41,13 +41,13 @@ It is designed to run **end-to-end in GitHub Codespaces using JupyterLab** (CPU-
 
 - **Notebooks**
   - `replication test.ipynb` — Recreates BLEURT scoring pipeline on a WebNLG-style sample and computes correlation against human ratings.
-  - `new data final.ipynb` — Evaluation on my constructed **DialogueSum** dataset (incl. negative correlation analysis).
+  - `new data final.ipynb` — Evaluation on my constructed **DialogueSum** dataset.
   - `CNN.ipynb`, `GovReport.ipynb`, `CommonGen.ipynb` — BLEURT generalisation tests on three public datasets (summary stats where correlation isn’t defined).
 - **Code**
   - `bleurt/` — Python module wrappers/utilities used by the notebooks (code only; **no model weights**).
   - `setup.py` — Minimal packaging glue.
 - **Data (lightweight)**
-  - CSVs required to run the notebooks (e.g., `all_data_final_averaged.csv`, `dialoguesum_*`, `refs_long.csv`, `scores_d12.txt`).
+  - CSVs required to run the notebooks (e.g., `all_data_final_averaged.csv`, `dialoguesum_fixed.csv`, `refs_long.csv`, `scores_d12.txt`).
 - **Admin**
   - `LICENSE`, `README.md`
 
