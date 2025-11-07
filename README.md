@@ -28,6 +28,42 @@ python -m unittest bleurt.score_not_eager_test
 python -m unittest bleurt.finetune_test
 python -m unittest bleurt.score_files_test
 ```
+# COMP8240 — BLEURT Replication & Evaluation (Codespaces/JupyterLab)
+
+This repository contains my **replication** of BLEURT (Sellam et al., ACL 2020) and **extensions** to additional datasets.  
+It is designed to run **end-to-end in GitHub Codespaces using JupyterLab** (CPU-only compatible).
+
+> **Public repo for marking**: all runnable notebooks and scripts are here; large model checkpoints and bulky artifacts are intentionally excluded via `.gitignore`.
+
+---
+
+## Contents
+
+- **Notebooks**
+  - `replication test.ipynb` — Recreates BLEURT scoring pipeline on a WebNLG-style sample and computes correlation against human ratings.
+  - `new data final.ipynb` — Evaluation on my constructed **DialogueSum** dataset (incl. negative correlation analysis).
+  - `CNN.ipynb`, `GovReport.ipynb`, `CommonGen.ipynb` — BLEURT generalisation tests on three public datasets (summary stats where correlation isn’t defined).
+- **Code**
+  - `bleurt/` — Python module wrappers/utilities used by the notebooks (code only; **no model weights**).
+  - `setup.py` — Minimal packaging glue.
+- **Data (lightweight)**
+  - CSVs required to run the notebooks (e.g., `all_data_final_averaged.csv`, `dialoguesum_*`, `refs_long.csv`, `scores_d12.txt`).
+- **Admin**
+  - `LICENSE`, `README.md`
+
+> **Excluded by design** (see `.gitignore`): BLEURT checkpoints (e.g., `BLEURT-20`, `BLEURT-20-D12`), `.zip` archives, generated outputs (`bleurt_eval_outputs/`), build caches, and `.ipynb_checkpoints/`.
+
+---
+
+## Quick Start (GitHub Codespaces)
+
+1. **Open Codespace → JupyterLab**  
+   On the repo’s GitHub page click **Code ▸ Codespaces ▸ Open in JupyterLab**.
+
+2. **Install Python dependencies** (already present in Codespaces defaults; run if needed):
+   ```bash
+   pip install --upgrade pip
+   pip install tensorflow tf-slim pandas numpy scipy tqdm matplotlib scikit-learn
 
 ## Using BLEURT - TL;DR Version
 
