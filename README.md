@@ -7,27 +7,7 @@ BLEURT is a *trained metric*, that is, it is a regression model trained on ratin
 An overview of BLEURT can be found in our our [blog post](https://ai.googleblog.com/2020/05/evaluating-natural-language-generation.html). Further details are provided in the ACL paper [BLEURT: Learning Robust Metrics for Text Generation](https://arxiv.org/abs/2004.04696) and [our EMNLP paper](http://arxiv.org/abs/2110.06341).
 
 
-## Installation
 
-BLEURT runs in Python 3. It relies heavily on `Tensorflow` (>=1.15) and the
-library `tf-slim` (>=1.1).
-You may install it as follows:
-
-```
-pip install --upgrade pip  # ensures that pip is current
-git clone https://github.com/google-research/bleurt.git
-cd bleurt
-pip install .
-```
-
-You may check your install with unit tests:
-
-```
-python -m unittest bleurt.score_test
-python -m unittest bleurt.score_not_eager_test
-python -m unittest bleurt.finetune_test
-python -m unittest bleurt.score_files_test
-```
 ## COMP8240 — BLEURT Replication & Evaluation (Codespaces/JupyterLab)
 
 This repository contains my **replication** of BLEURT (Sellam et al., ACL 2020) and **extensions** to additional datasets.  
@@ -64,7 +44,27 @@ It is designed to run **end-to-end in GitHub Codespaces using JupyterLab** (CPU-
    ```bash
    pip install --upgrade pip
    pip install tensorflow tf-slim pandas numpy scipy tqdm matplotlib scikit-learn
+## Installation
 
+BLEURT runs in Python 3. It relies heavily on `Tensorflow` (>=1.15) and the
+library `tf-slim` (>=1.1).
+You may install it as follows:
+
+```
+pip install --upgrade pip  # ensures that pip is current
+git clone https://github.com/google-research/bleurt.git
+cd bleurt
+pip install .
+```
+
+You may check your install with unit tests:
+
+```
+python -m unittest bleurt.score_test
+python -m unittest bleurt.score_not_eager_test
+python -m unittest bleurt.finetune_test
+python -m unittest bleurt.score_files_test
+```
 ## Using BLEURT - TL;DR Version
 
 The following commands download the recommended checkpoint and run BLEURT:
