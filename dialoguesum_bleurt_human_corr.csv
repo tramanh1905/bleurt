@@ -1,0 +1,4 @@
+metric,value,p_value,n,join,collapse
+pearson_r,0.03373079197734706,0.8497953546278006,34,text-key (candidate↔candidate_summary),max
+spearman_rho,0.11707168512690265,0.5096524340866534,34,text-key (candidate↔candidate_summary),max
+kendall_tau,0.10196845228208182,0.39790712840110853,34,text-key (candidate↔candidate_summary),max
